@@ -17,7 +17,7 @@ public class ZipBST {
 	public ZipBST() {}
 	
 	/**
-	 * 
+	 * Check to if binary tree is empty
 	 * @return
 	 */
 	public boolean isEmpty(){
@@ -25,7 +25,7 @@ public class ZipBST {
 	}
 
 	/**
-	 * 
+	 * Return a collection of int[] from BST
 	 * @return
 	 */
 	public Collection<int[]> getAllValues() {
@@ -37,7 +37,7 @@ public class ZipBST {
 	}
 
 	/**
-	 * 
+	 * Merge range to binary tree
 	 * @param range
 	 * @return
 	 */
@@ -52,7 +52,7 @@ public class ZipBST {
 	}
 	
 	/**
-	 * 
+	 * return size of tree
 	 * @return
 	 */
 	public int size(){
@@ -65,7 +65,7 @@ public class ZipBST {
 	}
 
 	/**
-	 * 
+	 * Get range from tree by key
 	 * @param key
 	 * @return
 	 */
@@ -89,7 +89,7 @@ public class ZipBST {
 	}
 	
 	/**
-	 * 
+	 * Insert range into tree
 	 * @param key
 	 * @param range
 	 */
@@ -118,7 +118,7 @@ public class ZipBST {
 	}
 	
 	/**
-	 * 
+	 * Delete range from tree by key
 	 * @param key
 	 */
 	public void delete(int key){
@@ -185,15 +185,7 @@ public class ZipBST {
 		return null;
 		
 	}
-	
-	private boolean isLowerBoundInRange(int lowerBound,  ZipRange range){
-		return  isBoundInRange( lowerBound, range);
-	}
-
-	private boolean isUpperBoundInRange(int upperBound,  ZipRange range){
-		return  isBoundInRange( upperBound, range);
-	}
-	
+		
 	private boolean isBoundInRange(int bound, ZipRange range){
 				
 		if(bound > range.lowerBound && bound < range.upperBound)

@@ -6,14 +6,7 @@ package my.zipcodes;
  */
 public class ZipRange implements Comparable<ZipRange> {
 
-	/*
-	 * zip code range upper bound
-	 */
 	protected int upperBound;
-	
-	/*
-	 * zip code range lower bound
-	 */
 	protected int lowerBound;
 	
 	/**
@@ -33,20 +26,9 @@ public class ZipRange implements Comparable<ZipRange> {
 		}
 		
 	}
-	/**
-	 * 
-	 * @return
-	 */
-	public boolean isRange(){
-		if(lowerBound == upperBound){
-			return false;
-		}else{
-			return true;
-		}
-	}
 	
 	/**
-	 * 
+	 * Get ranges lower bound
 	 * @return
 	 */
 	public int getLowerBound() {
@@ -54,7 +36,7 @@ public class ZipRange implements Comparable<ZipRange> {
 	}
 	
 	/**
-	 * 
+	 * Get range upperbound
 	 * @return
 	 */
 	public int getUpperBound() {
@@ -62,20 +44,15 @@ public class ZipRange implements Comparable<ZipRange> {
 	}
 	
 	/**
-	 * 
+	 * Get Range
 	 * @return
 	 */
 	public int[] getRange(){
-// @TODO: this is how I would have implmented but commented out to be more accurate with problem		
-//		
-//		if(this.lowerBound == this.upperBound){
-//			return new int[]{this.lowerBound};
-//		}
 		return new int[]{this.lowerBound, this.upperBound};
 	}
 
 	/**
-	 * 
+	 * Is the bound contained in range
 	 * @param bound
 	 * @return
 	 */
@@ -100,7 +77,6 @@ public class ZipRange implements Comparable<ZipRange> {
 		}
 	    	
 		return 0;	
-		
 	}
 	
 	@Override
@@ -131,10 +107,6 @@ public class ZipRange implements Comparable<ZipRange> {
 	
 	@Override
 	public String toString() {
-// @TODO: this is how I would have implmented but commented out to be more accurate with problem		
-//		if(this.lowerBound == this.upperBound){
-//		  return String.valueOf(this.lowerBound);	
-//		}
 	    return this.lowerBound +" - " + this.upperBound;
 	}
 	
